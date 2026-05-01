@@ -1,37 +1,48 @@
 using UnityEngine;
 
 
-namespace Player {
+public class Player : MonoBehaviour {
+    public static Player Instance { get; private set; }
 
-    public class Player : MonoBehaviour {
+    [SerializeField] private float movingSpeed = 5f;
 
-        private Rigidbody2D rb;
-        [SerializeField] private float movingSpeed = 5f;
+    private Rigidbody2D rb;
+    private float minMovingSpeed = 0.1f;
+    private bool isRunning = false;
 
-        private void Awake() {
-            rb = GetComponent<Rigidbody2D>();
+
+    private void Awake() {
+
+        Instance = this;
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void FixedUpdate() {
+
+        HandleMovemend();
+    }
+
+    private void HandleMovemend() {
+        Vector2 inputVector = GameInput.Instance.GetMovementVector();
+        inputVector = inputVector.normalized;
+        rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime));
+
+
+        if (Mathf.Abs(inputVector.x) > minMovingSpeed || Mathf.Abs(inputVector.y) > minMovingSpeed) {
+            isRunning = true;
 
         }
-        private void FixedUpdate() {
-
-            Vector2 inputVector = Vector2.zero;
-
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
-                inputVector.y = 1f;
-            }
-            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
-                inputVector.y = -1f;
-            }
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
-                inputVector.x = -1f;
-            }
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
-                inputVector.x = 1f;
-            }
-
-            inputVector = inputVector.normalized;
-
-            rb.MovePosition(rb.position + inputVector * (movingSpeed * Time.fixedDeltaTime));
+        else {
+            isRunning = false;
         }
+    }
+
+    public bool IsRunning() {
+        return isRunning;
+    }
+
+    public Vector3 GetPlayerScreenPosition() {
+        Vector3 playerScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        return playerScreenPosition;
     }
 }
