@@ -17,6 +17,15 @@ public class Player : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start() {
+        GameInput.Instance.OnPlayerAttack += Player_OnPlayerAttack;
+
+    }
+
+    private void Player_OnPlayerAttack(object sender, System.EventArgs e) {
+        ActiveWeapon.Instance.GetActiveWeapon().Attack();
+    }
+
     private void FixedUpdate() {
 
         HandleMovemend();
