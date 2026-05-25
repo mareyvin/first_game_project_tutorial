@@ -535,7 +535,7 @@ Transform:
   m_GameObject: {fileID: 437602969}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.37, y: -1.95, z: 0}
   m_LocalScale: {x: 53.637623, y: 30.196268, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -896,7 +896,7 @@ Transform:
   m_GameObject: {fileID: 983461128}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.89, y: 0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1677,25 +1677,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2972987125425132526, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5265604
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972987125425132526, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.59328496
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972987125425132526, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.18379226
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972987125425132526, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07814632
+      objectReference: {fileID: 0}
     - target: {fileID: 3889674299577949930, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_Name
-      value: Slime
+      value: Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 4010333914343207425, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.60402924
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4010333914343207425, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8815172
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4010333914343207425, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.052375276
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4010333914343207425, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4010333914343207425, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1703,7 +1719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4010333914343207425, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4010333914343207425, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1715,10 +1731,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4010333914343207425, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4010333914343207425, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036933460477742052, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -212438847, guid: 81e5594eabcaf694899efbe608134ef7, type: 3}
+    - target: {fileID: 6785256603375780816, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
+      propertyPath: m_Name
+      value: SkeletonVisual
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614356246435676991, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
+      propertyPath: m_Name
+      value: SkeletonShadow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632662978779745981, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632662978779745981, guid: 52693e682226b3a4ca9d56a10d3c1e9f, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
